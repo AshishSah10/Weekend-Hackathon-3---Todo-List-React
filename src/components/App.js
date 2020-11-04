@@ -22,6 +22,7 @@ function App() {
   const handleSave = (newTask, index = 0) => {
     var toDoListCopy = [...toDoList];
     let newToDo = {};
+    if (newTask.trim() === "") return;
     newToDo.lable = newTask;
     newToDo.displayEdit = false;
     toDoListCopy.push(newToDo);

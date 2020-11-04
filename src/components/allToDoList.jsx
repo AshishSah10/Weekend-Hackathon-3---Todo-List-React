@@ -3,6 +3,7 @@ import ToDoListNew from "./toDoListNew";
 
 function allToDoList(props) {
   const handleSave = (editedTask, index) => {
+    if (editedTask.trim() === "") return;
     var allToDoListCopy = [...props.allToDoList];
     allToDoListCopy[index].lable = editedTask;
     allToDoListCopy[index].displayEdit = false;
@@ -17,8 +18,16 @@ function allToDoList(props) {
             {todo.displayEdit === false ? (
               <>
                 {todo.lable}
-                <button onClick={() => props.handleEdit(index)}>Edit</button>
-                <button onClick={() => props.handleDelete(index)}>
+                <button
+                  clsssName="edit"
+                  onClick={() => props.handleEdit(index)}
+                >
+                  Edit
+                </button>
+                <button
+                  className="delete"
+                  onClick={() => props.handleDelete(index)}
+                >
                   Delete
                 </button>
               </>
