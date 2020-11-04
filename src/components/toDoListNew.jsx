@@ -17,13 +17,22 @@ function ToDoListNew(props) {
         value={newTask}
       ></textarea>
       {props.page === "1" ? (
-        <button id="btn" onClick={() => props.handleSave(newTask)}>
+        <button
+          id="btn"
+          onClick={() => {
+            setNewTask("");
+            props.handleSave(newTask);
+          }}
+        >
           Save
         </button>
       ) : (
         <button
           id="saveTask"
-          onClick={() => props.handleSave(newTask, props.index)}
+          onClick={() => {
+            setNewTask("");
+            props.handleSave(newTask, props.index);
+          }}
         >
           SaveEdit
         </button>

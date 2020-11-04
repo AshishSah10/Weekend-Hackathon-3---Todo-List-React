@@ -19,7 +19,7 @@ function allToDoList(props) {
               <>
                 {todo.lable}
                 <button
-                  clsssName="edit"
+                  className="edit"
                   onClick={() => props.handleEdit(index)}
                 >
                   Edit

@@ -15,7 +15,6 @@ function App() {
   //   }
   // ];
   const [toDoList, setToDoList] = React.useState([]);
-
   const handleSaveEdited = (toDoListCopy) => {
     setToDoList(toDoListCopy);
   };
