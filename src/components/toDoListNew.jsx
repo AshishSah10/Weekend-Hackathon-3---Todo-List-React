@@ -1,0 +1,36 @@
+import React from "react";
+
+function ToDoListNew(props) {
+  const [newTask, setNewTask] = React.useState("");
+  const handleChange = (event) => {
+    setNewTask(event.target.value);
+  };
+  return (
+    <div>
+      <h1>inside TodoList</h1>
+      <textarea
+        id={props.page === "1" ? "task" : "editTask"}
+        name="task"
+        rows="4"
+        cols="50"
+        placeholder="fill you task here"
+        onChange={(event) => handleChange(event)}
+        value={newTask}
+      ></textarea>
+      {props.page === "1" ? (
+        <button id="btn" onClick={() => props.handleSave(newTask)}>
+          Save
+        </button>
+      ) : (
+        <button
+          id="saveTask"
+          onClick={() => props.handleSave(newTask, props.index)}
+        >
+          SaveEdit
+        </button>
+      )}
+    </div>
+  );
+}
+
+export default ToDoListNew;
