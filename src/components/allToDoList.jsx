@@ -11,7 +11,6 @@ function allToDoList(props) {
   var display = false;
   return (
     <div>
-      <h1>inside allTodoList</h1>
       <ol>
         {props.allToDoList.map((todo, index) => (
           <li key={`${index + 1}`} className="list">

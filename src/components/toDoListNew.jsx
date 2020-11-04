@@ -7,7 +7,6 @@ function ToDoListNew(props) {
   };
   return (
     <div>
-      <h1>inside TodoList</h1>
       <textarea
         id={props.page === "1" ? "task" : "editTask"}
         name="task"
