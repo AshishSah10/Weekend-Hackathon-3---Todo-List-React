@@ -28,7 +28,7 @@ function App() {
     setToDoList(toDoListCopy);
   };
   const handleEdit = (index) => {
-    console.log("inside handleEdit");
+    //console.log("inside handleEdit");
     var toDoListCopy = [...toDoList];
     toDoListCopy[index].displayEdit = true;
     setToDoList(toDoListCopy);
@@ -42,7 +42,6 @@ function App() {
     <div id="main">
       <ToDoListNew page={"1"} handleSave={handleSave} />
       <AllToDoList
-        page={"2"}
         allToDoList={toDoList}
         handleSaveEdited={handleSaveEdited}
         handleEdit={handleEdit}

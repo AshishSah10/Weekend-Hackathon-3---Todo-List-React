@@ -8,7 +8,7 @@ function allToDoList(props) {
     allToDoListCopy[index].displayEdit = false;
     props.handleSaveEdited(allToDoListCopy);
   };
-  var display = false;
+  //var display = false;
   return (
     <div>
       <ol>
@@ -17,12 +17,7 @@ function allToDoList(props) {
             {todo.displayEdit === false ? (
               <>
                 {todo.lable}
-                <button
-                  onClick={() => props.handleEdit(index)}
-                  display={display ? true : false}
-                >
-                  Edit
-                </button>
+                <button onClick={() => props.handleEdit(index)}>Edit</button>
                 <button onClick={() => props.handleDelete(index)}>
                   Delete
                 </button>
