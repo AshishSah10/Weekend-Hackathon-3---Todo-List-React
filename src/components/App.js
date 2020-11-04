@@ -14,6 +14,7 @@ function App() {
   //     displayEdit: false
   //   }
   // ];
+  var task = "";
   const [toDoList, setToDoList] = React.useState([]);
   const handleSaveEdited = (toDoListCopy) => {
     setToDoList(toDoListCopy);
@@ -40,7 +41,7 @@ function App() {
   };
   return (
     <div id="main">
-      <ToDoListNew page={"1"} handleSave={handleSave} />
+      <ToDoListNew task={task} page={"1"} handleSave={handleSave} />
       <AllToDoList
         allToDoList={toDoList}
         handleSaveEdited={handleSaveEdited}

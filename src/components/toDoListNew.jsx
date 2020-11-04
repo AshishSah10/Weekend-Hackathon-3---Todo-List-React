@@ -1,7 +1,7 @@
 import React from "react";
 
 function ToDoListNew(props) {
-  const [newTask, setNewTask] = React.useState("");
+  const [newTask, setNewTask] = React.useState(props.task);
   const handleChange = (event) => {
     setNewTask(event.target.value);
   };

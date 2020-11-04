@@ -35,7 +35,7 @@ function allToDoList(props) {
               <ToDoListNew
                 page={"2"}
                 index={index}
-                newTask={props.allToDoList[index].lable}
+                task={props.allToDoList[index].lable}
                 handleSave={handleSave}
               />
             )}
