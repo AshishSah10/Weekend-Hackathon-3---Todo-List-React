@@ -8,7 +8,8 @@ function ToDoListNew(props) {
   return (
     <div>
       <textarea
-        id={props.page === "1" ? "task" : "editTask"}
+        id="task"
+        className={props.page === "1" ? "task" : "editTask"}
         name="task"
         rows="4"
         cols="50"
@@ -28,7 +29,7 @@ function ToDoListNew(props) {
         </button>
       ) : (
         <button
-          id="saveTask"
+          className="saveTask"
           onClick={() => {
             setNewTask("");
             props.handleSave(newTask, props.index);
